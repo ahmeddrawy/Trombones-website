@@ -1,20 +1,20 @@
 <html>
 <head>
 
-
+ <!-- changed the id in the form to name to use them in the form  -->
 </head>
-<body>
+    <body>
 
 
-<!-- validate username & password inputs using (js and/or php) and go to userPaga.html -->
-<!-- insert the new user in database -->
-<form name="signupForm">
-username : <input type="text" id="username" /> <br/>
-password : <input type="password" id="password"/> <br/>
-email 	 : <input type="email" id="email"/> <br/>
-telephone : <input type = "text" id="telephone" /> <br/>
-<input type="submit" value="sign up" id = "signupBtn"/>
-</form>
+    <!-- validate username & password inputs using (js and/or php) and go to userPaga.html -->
+    <!-- insert the new user in database -->
+        <form name="signupForm" action="DataBase/insertUser.php" method ="post">
+            username : <input type="text" name="username"  /> <br/>
+            password : <input type="password" name="password"/> <br/>
+            email 	 : <input type="email" name="email"/> <br/>
+            telephone : <input type = "text" name="telephone" /> <br/>
+            <input type="submit" value="sign up" name = "signupBtn"/>
+        </form>
 
-</body>
+    </body>
 </html>

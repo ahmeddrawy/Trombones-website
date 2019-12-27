@@ -10,16 +10,40 @@
 
 <?php 
     $dbname = "it-project";
+    print_r($_POST);
     $conn = connectToDB($dbname);
     $cantconnectmsg= "cant connect to  Datatbase currently <br>";
     if($conn->connect_error){
         die($cantconnectmsg . $conn->connect_error);
     }
     else {
-
-        echo"hey";
+        insertUser();
+        // query goes here
     }
 
+
+
+?>
+<?php
+    function insertUser(){
+        global $conn;
+        
+        $q = "INSERT INTO Users (UID, Name, Email, Password) VALUES (NULL, '{$_POST['username']}', '{$_POST['email']}', '{$_POST['password']}')";
+     //   echo"$q";
+        if($conn->query($q)==true){
+            echo "signed up successfully <br>";
+        }
+        else {
+            echo "error while signing up <br>"; 
+        }
+
+    }
+    function emailIsRegisered($email){
+        
+        /// todo 
+
+    }
+    
 
 
 ?>

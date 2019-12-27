@@ -25,6 +25,18 @@ $dbname = "trombonedb";
 	$password = $_POST['password'];
 	$email = $_POST['email'];
 
+	//validation kind of:
+	if( $email == "" ) {
+        echo '<script type="text/JavaScript">  
+	    alert("Please provide your Email!");</script>' ;
+	    echo '<script type="text/JavaScript"> window.location.href="http://localhost/Trombones-website/";</script>';
+
+     }
+    else if( $password == ""  ) {
+    	echo '<script type="text/JavaScript"> alert("Please provide your Password!");</script>' ;
+    	echo '<script type="text/JavaScript"> window.location.href="http://localhost/Trombones-website/";</script>';
+    }
+
 	$sql = "SELECT * FROM users WHERE Password = '$password' AND Email = '$email' " ;
 
 	$result = mysqli_query($conn, $sql);
@@ -32,7 +44,7 @@ $dbname = "trombonedb";
 	if($num_of_rows != 0 )
 	{
 		$_SESSION['Email'] = $email;
-		header('Location: http://localhost/Trombones-website/userPage.html');
+		header('Location: http://localhost/Trombones-website/userPage.php');
 	}
 	else
 	{
@@ -42,9 +54,9 @@ $dbname = "trombonedb";
 		echo '<script type="text/JavaScript">  
 	    alert("'.$_SESSION['errorMessage'].'");</script>' ;
 		unset($_SESSION['errorMessage']) ;
-		header('Location: http://localhost/Trombones-website/');
-
-
+		
+		echo '<script type="text/JavaScript"> window.location.href="http://localhost/Trombones-website/";</script>';
+		//header('Location: http://localhost/Trombones-website/');
 	}
 		//header('Location: http://localhost/IT_Project/signup.html');
 		//echo "<script type='text/javascript'>alert('$conn->error');</script>";
@@ -52,5 +64,5 @@ $dbname = "trombonedb";
 	}
 
 	$conn->close();
-//}
+//echo '<script type="text/JavaScript"> alert("");</script>' ;
 ?>

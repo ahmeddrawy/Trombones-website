@@ -28,7 +28,7 @@ if($conn->query($sql) == true)
 	$_SESSION['message'] = "you are now logged in"; 
 	$_SESSION['email'] = $email;
 	echo "table updated\n" ;
-	header('Location: http://localhost/IT_Project/');
+	header('Location: http://localhost/Trombones-website/');
 }
 else
 {

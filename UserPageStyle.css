@@ -49,6 +49,8 @@ header > * {
 	margin:0px;
 	padding:7px;
 	font-family: 'Lato', sans-serif;
+	
+	border-radius: 12px;
 }
 
 a:link , a:active , a:visited , a:hover
@@ -212,8 +214,8 @@ Details{
 	margin-left:50px;
 	padding:7px;
 	font-family: 'Lato', sans-serif;
+	border-radius: 12px;
 }
-
 
 	
 	

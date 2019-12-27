@@ -123,6 +123,8 @@ a:link , a:active , a:visited , a:hover
 	position:absolute;
 	top:120px;
 	height:600px;
+	
+	border-radius: 12px;
 	}
 	
 	form.center ,h1.center{
@@ -176,3 +178,7 @@ a:link , a:active , a:visited , a:hover
 	color:white;
 	border-radius: 12px;
 	}
+	
+input{
+	border-radius: 12px;
+}	

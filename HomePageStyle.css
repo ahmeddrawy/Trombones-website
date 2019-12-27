@@ -112,6 +112,7 @@ a:link , a:active , a:visited , a:hover
 	margin-left:50px;
 	padding:7px;
 	font-family: 'Lato', sans-serif;
+	border-radius: 12px;
 }
 
 #Features
@@ -160,4 +161,7 @@ a:link , a:active , a:visited , a:hover
 	margin-left:320px;
 	margin-right:300px;
 }	
-	
+
+input{
+	border-radius: 12px;
+}	

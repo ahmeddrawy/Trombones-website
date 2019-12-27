@@ -1,3 +1,54 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "trombonedb";
+
+// Create connection
+session_start();
+
+	$conn = mysqli_connect($servername, $username, $password ,$dbname );
+if(isset($_POST["add"])){
+	// Check connection
+	if (!$conn) {
+	    die("Connection failed: " . mysqli_connect_error());
+	}
+	else{
+		echo "Connected successfully\n";
+	}
+
+	$name =mysql_real_escape_string( $_POST['username'] );
+	$password = mysql_real_escape_string ($_POST['password']);
+	$email = mysql_real_escape_string($_POST['email']);
+
+	$sql = "INSERT INTO users (Name , Password , Email ) VALUES ('$name' , '$password' , '$email' )" ;
+
+	if($conn->query($sql) == true)
+	{
+		$_SESSION['message'] = "you are now logged in"; 
+		$_SESSION['email'] = $email;
+		echo "table updated\n" ;
+		header('Location: http://localhost/Trombones-website/');
+	}
+	else
+	{
+		echo "Error updating table: " . $conn->error;
+		$_SESSION['errorMessage'] = $conn->error;
+		header('Location: http://localhost/Trombones-website/signup.php');
+		//echo "<script type='text/javascript'>alert('$conn->error');</script>";
+
+	}
+
+	if(isset($_SESSION['errorMessage']) && !empty($_SESSION['errorMessage'])) {
+		echo '<script type="text/JavaScript">  
+	    alert("'.$_SESSION['errorMessage'].'");</script>' ;
+		unset($_SESSION['errorMessage']) ;
+	}
+
+	$conn->close();
+}
+?>
+
 <html>
 <head>
 
@@ -66,7 +117,7 @@ function validate()
 <body>
 <!-- validate username & password inputs using (js and/or php) and go to userPaga.html -->
 <!-- insert the new user in database -->
-<form action="signUpPhp.php" method="post" name="signUpForm" onsubmit="return(validate());">
+<form action="signup.php" method="post" name="signUpForm" onsubmit="return(validate());">
 username : <input type ="text" name ="username" id="username"/> <br/> <br/>
 password : <input type="password" name="password" id="password"/> <br/> <br/>
 confirm Password : <input type="password" name="password2" id="password2"/> <br/> <br/>
@@ -78,13 +129,4 @@ email : <input type="email" name ="email" id="email"/> <br/> <br/>
 
 </body>
 </html>
-<?php session_start();
 
-if(isset($_SESSION['errorMessage']) && !empty($_SESSION['errorMessage'])) {
-	echo '<script type="text/JavaScript">  
-    alert("'.$_SESSION['errorMessage'].'");</script>' ;
-	unset($_SESSION['errorMessage']) ;
-}
-//echo("hello world");
-
- ?>

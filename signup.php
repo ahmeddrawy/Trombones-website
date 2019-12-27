@@ -2,7 +2,14 @@
 <head>
 
 <script>
-
+/*	
+	var errorMsg = <?php echo $_SESSION['errorMessage'] ?>;
+	alert("here");
+	if(errorMsg != ''){
+    	<?php unset($_SESSION['errorMessage']) ?>;
+    	alert (errorMsg);
+	}
+	*/
 function validate()
 {
 	var name = document.getElementById("username").value;
@@ -12,12 +19,13 @@ function validate()
 		
  	var illegalChars = /\W/; // allow letters, numbers, and underscores
 
+	
 	if( name == "" ) {
             alert( "Please provide your name!" );
             document.signUpForm.username.focus() ;
             return false;
          }
-    else if(  email == "") {
+    else if( email == "") {
         alert( "Please provide your Email!" );
         document.signUpForm.email.focus() ;
             return false;
@@ -49,6 +57,7 @@ function validate()
 		//document.form['myForm'].submit();
 		return true;
 	}
+
 }
 
 </script>
@@ -62,8 +71,20 @@ username : <input type ="text" name ="username" id="username"/> <br/> <br/>
 password : <input type="password" name="password" id="password"/> <br/> <br/>
 confirm Password : <input type="password" name="password2" id="password2"/> <br/> <br/>
 email : <input type="email" name ="email" id="email"/> <br/> <br/>
-<input  type="submit" value="add" name = "add" onclick="validate()"/>
+
+<input  type="submit" value="add" name = "add" />
+
 </form>
 
 </body>
 </html>
+<?php session_start();
+
+if(isset($_SESSION['errorMessage']) && !empty($_SESSION['errorMessage'])) {
+	echo '<script type="text/JavaScript">  
+    alert("'.$_SESSION['errorMessage'].'");</script>' ;
+	unset($_SESSION['errorMessage']) ;
+}
+//echo("hello world");
+
+ ?>

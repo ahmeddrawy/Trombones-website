@@ -5,6 +5,8 @@ $password = "";
 $dbname = "trombonedb";
 
 // Create connection
+session_start();
+
 $conn = mysqli_connect($servername, $username, $password ,$dbname );
 
 // Check connection
@@ -15,7 +17,6 @@ else{
 	echo "Connected successfully\n";
 }
 
-echo $_POST;
 $name = $_POST['username'];
 $password = $_POST['password'];
 $email = $_POST['email'];
@@ -24,13 +25,17 @@ $sql = "INSERT INTO users (Name , Password , Email ) VALUES ('$name' , '$passwor
 
 if($conn->query($sql) == true)
 {
-	echo "table updated\n";
+	$_SESSION['message'] = "you are now logged in"; 
+	$_SESSION['email'] = $email;
+	echo "table updated\n" ;
 	header('Location: http://localhost/IT_Project/');
 }
 else
 {
 	echo "Error updating table: " . $conn->error;
-	//header('Location: http://localhost/IT_Project/signup.html');
+	$_SESSION['errorMessage'] = $conn->error;
+	echo($_SESSION['errorMessage']);
+	header('Location: http://localhost/Trombones-website/signup.php');
 	//echo "<script type='text/javascript'>alert('$conn->error');</script>";
 
 }

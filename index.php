@@ -41,7 +41,7 @@ if(isset($_POST['loginBTN'])){
 
 	$result = mysqli_query($conn, $sql);
 	$num_of_rows =  mysqli_num_rows($result);
-	if($num_of_rows != 0 )
+	else if($num_of_rows != 0 )
 	{
 		$_SESSION['Email'] = $email;
 		header('Location: http://localhost/Trombones-website/userPage.php');

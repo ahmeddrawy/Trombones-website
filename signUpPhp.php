@@ -17,9 +17,9 @@ else{
 	echo "Connected successfully\n";
 }
 
-$name = $_POST['username'];
-$password = $_POST['password'];
-$email = $_POST['email'];
+$name =mysql_real_escape_string( $_POST['username'] );
+$password = mysql_real_escape_string ($_POST['password']);
+$email = mysql_real_escape_string($_POST['email']);
 
 $sql = "INSERT INTO users (Name , Password , Email ) VALUES ('$name' , '$password' , '$email' )" ;
 
@@ -34,7 +34,6 @@ else
 {
 	echo "Error updating table: " . $conn->error;
 	$_SESSION['errorMessage'] = $conn->error;
-	echo($_SESSION['errorMessage']);
 	header('Location: http://localhost/Trombones-website/signup.php');
 	//echo "<script type='text/javascript'>alert('$conn->error');</script>";
 

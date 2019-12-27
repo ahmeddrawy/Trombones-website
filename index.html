@@ -12,12 +12,13 @@
 	 zay 2l 2ly 2l doctor 3mlha m4 3afra 2zay for now :D 
 	 fyha 2l (insert ,update,....)
 -->
-<form name="loginForm"> 
-username : <input type="text" id="username"/> <br/>
-password : <input type="password" id="password"/> <br/>
-<input type="button" id="loginBtn" value="login" onclick = "window.location.href = 'userPage.html'"/> <br/>
-</form>
+ 
 
+<form name="loginForm" action="signInPhp.php" method="POST">
+Email : <input type="text" id="email" name="email" /> <br/>
+password : <input type="password" id="password" name="password" /> <br/>
+<input type="submit" value="login" id="loginBtn"/> <br/>
+</form>
 
 <!-- go to signup.html -->
 <form name="signupForm" action="signup.php" method="POST">

@@ -12,6 +12,7 @@
 username : <input type="text" id="username" /> <br/>
 password : <input type="password" id="password"/> <br/>
 email 	 : <input type="email" id="email"/> <br/>
+telephone : <input type = "text" id="telephone" /> <br/>
 <input type="submit" value="sign up" id = "signupBtn"/>
 </form>
 

@@ -1,0 +1,178 @@
+*	{
+		margin: 0;
+		padding: 0;
+		font-family: 'Lato', sans-serif;
+		box-sizing: border-box;
+	}
+
+body{
+		background-color:#eee;
+	}
+	
+header
+{
+	width:100%;
+	background-color:#EEEEEE;
+	height:80px;
+	padding:15px;
+	padding-top:15px;
+	text-align:center;
+	font-family: 'Lato', sans-serif;
+	position:fixed;
+	top:0px;
+	z-index:1;	
+	border-bottom:2px solid black;
+}
+
+header > * {
+	display:inline-block;
+}
+
+#PageTags{
+	position:absolute;
+	right:40px;
+	top:15px;
+}
+
+#PageTags > li {
+	text-decoration:none;
+	display:inline-block;
+	margin-right:30px;
+	margin-left:30px;
+	margin-top:5px;
+	z-index:1;	
+}
+
+.userButton{
+	width:120px;
+	background-color:#f1c40f;
+	font-size:15px;
+	font-weight:bold;
+	margin:0px;
+	padding:7px;
+	font-family: 'Lato', sans-serif;
+}
+
+a:link , a:active , a:visited , a:hover
+{
+	text-decoration:none;
+	color:black;
+}
+	
+#PageTitle
+{
+	font-size:30px;
+	font-weight:bold;
+	text-align:left;
+	position:absolute;
+	top:20px;
+	left:75px;
+}
+	
+#PageIcon
+{
+	position:absolute;
+	left:10px;
+	top: 15px;	
+}
+
+#MainPart
+{
+	border:2px red solid;
+	position:absolute;
+	top:120px;
+	height:600px;
+	
+	width:auto;
+	left:60px;
+	right:60px;
+	margin:auto;
+}
+
+#editUserForm
+{
+	position:absolute;
+	top:100px;	
+	
+	width:auto;
+	left:60px;
+	right:60px;
+	margin:auto;
+}
+
+#username , #password , #email , #age
+{
+	display:block;
+		width:auto;
+	left:60px;
+	right:60px;
+	margin:auto;
+}
+
+	form{
+	background-color:#FAFAFA;
+	position:absolute;
+	
+	padding:20px;
+	border-bottom:30px solid #eee;
+	
+	width:auto;
+	left:200px;
+	right:200px;
+	margin:auto;
+	position:absolute;
+	top:120px;
+	height:600px;
+	}
+	
+	form.center ,h1.center{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	
+	#tabletitle
+	{text-align:center;
+	padding-bottom:20px;
+	margin:10px;
+	font-size:25;
+	font-weight:bold
+	}
+	
+	table{
+	width:100%;
+	height:100%;
+	position:relative;
+	}
+	
+	
+	#infotxt{
+	text-align:right;
+	margin:10px;
+	margin-right:20px;
+	width:50%;
+	padding-bottom:20px;
+	vertical-align:text-top;
+	}
+	
+	#formitems{margin:10px;
+	padding-left:15px;
+	padding-bottom:20px;
+	vertical-align:text-top;
+	}
+	
+	#inputTxt{
+	padding:7px;
+	width:70%;
+	background-color:#FFFFF;
+	}
+	
+	#updateBtn
+	{
+	font-family:Arial;
+	padding:20px;
+	font-size:20px;
+	background-color:#59ace0;
+	color:white;
+	border-radius: 12px;
+	}

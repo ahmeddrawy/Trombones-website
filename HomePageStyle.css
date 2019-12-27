@@ -1,0 +1,163 @@
+*	{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+body{
+		background-color:#EEEEEE;
+	}
+	
+header
+{
+	width:100%;
+	background-color:#EEEEEE;
+	height:80px;
+	padding:15px;
+	padding-top:15px;
+	text-align:center;
+	font-family: 'Lato', sans-serif;
+	position:fixed;
+	top:0px;
+	z-index:1;
+}
+
+header > * {
+	display:inline-block;
+}
+#PageTags{
+	position:absolute;
+	right:40px;
+	top:15px;
+}
+
+#PageTags > li {
+	text-decoration:none;
+	display:inline-block;
+	margin-right:50px;
+	margin-left:40px;
+	margin-top:15px;
+	z-index:1;	
+}
+
+a:link , a:active , a:visited , a:hover
+{
+	text-decoration:none;
+	color:black;
+}
+	
+#PageTitle
+{
+	font-size:30px;
+	font-weight:bold;
+	text-align:left;
+	position:absolute;
+	top:20px;
+	left:75px;
+}
+	
+#PageIcon
+{
+	position:absolute;
+	left:10px;
+	top: 15px;	
+}
+
+#loginForm
+{
+	font-family: 'Lato', sans-serif;
+	font-size:13px;
+	text-align:center;
+	padding:20px;
+	margin:10px;
+	position:absolute;
+	top:50px;
+	left:20%;
+	right:30%;
+	margin:auto;
+	margin-top:50px;
+	padding-bottom:20px;
+}
+
+#GoToSignupForm
+{
+	font-family: 'Lato', sans-serif;
+	font-size:13px;
+	text-align:center;
+	padding:20px;
+	margin:10px;
+	position:absolute;
+	top:260px;
+	left:20%;
+	right:30%;
+	margin:auto;
+	margin-top:50px;
+	padding-bottom:20px;
+}
+
+#username , #password
+{
+	padding:3px;
+	margin:7px;
+	width:200px;
+}
+
+.loginBtn
+{
+	width:100px;
+	background-color:#f1c40f;
+	font-size:15px;
+	font-weight:bold;
+	margin:10px;
+	margin-left:50px;
+	padding:7px;
+	font-family: 'Lato', sans-serif;
+}
+
+#Features
+{
+	position:absolute;
+	top:400px;
+	left:50px;
+	margin:auto;
+}
+
+#Features{
+	align:center;
+	position:absolute;
+	top:450px;
+	margin-left:190px;
+	margin-right:190px;
+	margin-bottom:100px;
+}
+	
+#FeatureIcon{
+	padding:10px;
+	vertical-align:text-top;
+	margin-right:20px;
+	padding-right:10px;
+}
+
+#FeatureDesc{
+	padding:20px;
+	font-family: 'Lato', sans-serif;
+	padding-bottom:50px;
+	margin-left:20px;
+	padding-left:20px;
+}
+
+.center{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+#works{
+	
+	align:center;
+	position:relative;
+	top:200px;
+	margin-left:320px;
+	margin-right:300px;
+}	
+	

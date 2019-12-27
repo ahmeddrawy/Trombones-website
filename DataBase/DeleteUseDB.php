@@ -3,7 +3,7 @@
 <!--  User Data base manilpulation functions v1.0 -->
 <?php
     include "/var/www/html/it-project/DataBase/DBcredentials.php";
-
+    include"/var/www/html/it-project/DataBase/emailcheck.php";
     ini_set('display_errors', true);
 
 ?>
@@ -49,29 +49,6 @@
             }
         }
     }
-    function emailfound(){
-        
-        if(isset($_POST['email'])){
-            global $conn ; 
-            $qcheck = "select * from Users where Email='{$_POST['email']}' ";
-             
-            if($conn->query($qcheck)== true ){
-               
-                $result =$conn->query($qcheck);
-                if($result->num_rows>0){  
-                    return true ;
-                }
-                
-            }
-            else {
-            
-                echo "account not found  <br>";
-            }
-        }
-        else {
-            echo "provide email <br>";
-        }
-        return false;
-    }
+    
 
 ?>

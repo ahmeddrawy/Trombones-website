@@ -12,8 +12,9 @@
 	<img src="icon.png" id="PageIcon"/>
 	<h1 id="PageTitle">Original Trombones</h1>
 	<ul id="PageTags"> 
-		<li><input type="button" class="userButton" value="Back To Profile" onclick ="window.location.href = 'userPage.php'"/></li>
-		<li><input type="button" class="userButton" value="Home Page" onclick="window.location.href = 'index.php'"/> </li>
+
+		<li><input type="button" class="userButton" value="Back To Home Page" onclick="window.location.href = 'index.php'"/> </li>
+
 	</ul> 
 </header>
 
@@ -33,12 +34,15 @@
 				<td id = "infotxt">Email :</td>
 				<td id = "formitems"> <input id = "inputTxt"  name ="email" type="e-mail"/></td>
 			</tr>
-		<!--
+
+			<!--
 			<tr> 
 				<td id = "infotxt">Age :</td>
 				<td id = "formitems"><input id = "inputTxt" name="age" type="number"/></td>
 			</tr>
-		-->
+
+			-->
+
 			<tr> 
 				<td id = "infotxt">Password :</td>
 				<td id = "formitems"><input id = "inputTxt" name="password" type="Password"/></td>

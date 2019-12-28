@@ -18,7 +18,7 @@
 	<ul id="PageTags"> 
 		<li> <a href="#Features">Features</a></li>
 		<li> <a href="#How it works"> Login as Admin
-						<input type="button" class="loginBtn" id="AdminloginBtn" value="login" onclick = "window.location.href = 'AdminPage.php'"/> <br/>
+						<input type="button" class="loginBtn" id="AdminloginBtn" value="login" onclick = "window.location.href = 'LoginAdminPage.php'"/> <br/>
 		</a></li>
 	</ul> 
 </header>

@@ -45,7 +45,7 @@
 	</div>
 	
 	<div class="row">
-		<form name="EditPrice" id="EditPrice">	
+		<form name="EditPrice" id="EditPrice" action ="admin/editprice.php" method="post">	
 			<table border="0">
 				<tr> 
 					<td colspan="2" id="tabletitle" > Edit Brand Price </td> 

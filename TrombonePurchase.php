@@ -35,7 +35,7 @@
 </header>
 
 <div id="content">
-	<form name="PurchaseForm">	
+	<form name="PurchaseForm" action ="TrombonePurchaseForm.php" method="post">	
 		<table border="0">
 			<tr> 
 				<td colspan="2" id="tabletitle" > Buy and enjoy playing on our Trombones </td> 

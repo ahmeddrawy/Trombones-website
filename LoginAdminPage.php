@@ -19,7 +19,7 @@
 </header>
 
 <div id="content">
-	<form action="AdminPageCheck.php" method="POST" name="loginAdminForm" id="loginAdminForm" onsubmit="return(validate());" >
+	<form action="AdminLoginCheck.php" method="POST" name="loginAdminForm" id="loginAdminForm" onsubmit="return(validate());" >
 		<table border="0">
 			<tr> 
 				<td colspan="2" id="tabletitle" > You can login here if you're admin</td> 

@@ -25,15 +25,15 @@
         print_r($_POST);
         if(isset($_POST) && !empty($_POST['brandName']) && !empty($_POST["inputTxt"])){
             $brand=$_POST["brandName"];
-            $TrombonePrice = $_POST["inputTxt"];
+            $TromboneNumAdd = $_POST["inputTxt"];
             $q = "select * from Trombones where Brand='$brand'";
             if($conn->query($q)== true  ){
                 $result =$conn->query($q)->fetch_assoc();
-                $nAvailable= $result["nAvailable"];
-                $qChange= "UPDATE Trombones SET Price = $TrombonePrice WHERE Brand= '$brand'";
+                $nAvailable= $result["nAvailable"] + $TromboneNumAdd ;
+                $qChange= "UPDATE Trombones SET nAvailable = $nAvailable WHERE Brand= '$brand'";
                 if($conn->query($q)== true  ){
                     $conn->query($qChange);
-                    echo '<script type="text/JavaScript">  
+                     echo '<script type="text/JavaScript">  
                      alert("Done!");</script>' ;
                      echo '<script type="text/JavaScript"> window.location.href="http://localhost/Trombones-website/AdminPage.php";</script>';
                     // echo "succefully purchased ".$nItems ." of ". $brand ."<br>";

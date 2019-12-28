@@ -18,7 +18,7 @@
 
 <div id="content">
 	<div class="row">
-		<form action ="AddTrombones.php" onsubmit="return(validate());" method = "POST" name="addProduct" id="addProduct" >	
+		<form action ="admin/AdminPageCheck.php" onsubmit="return(validate());" method = "POST" name="addProduct" id="addProduct" >	
 			<table border="0">
 				<tr> 
 					<td colspan="2" id="tabletitle" > Add more Trombones </td> 
@@ -46,7 +46,7 @@
 	</div>
 	
 	<div class="row">
-		<form name="EditPrice" id="EditPrice" action ="admin/editprice.php" method="post">	
+		<form name="EditPrice" id="EditPrice" action ="admin/editprice.php" method="post" onsubmit="return(validate());" >	
 
 			<table border="0">
 				<tr> 

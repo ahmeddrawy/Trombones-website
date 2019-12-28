@@ -20,7 +20,7 @@
 	$password = $_POST['password'];
 	$email = $_POST['email'];
 
-	$sql = "INSERT INTO users (Name , Password , Email ) VALUES ('$name' , '$password' , '$email' )" ;
+	$sql = "INSERT INTO Users (Name , Password , Email ) VALUES ('$name' , '$password' , '$email' )" ;
 
 	if($conn->query($sql) == true)
 	{

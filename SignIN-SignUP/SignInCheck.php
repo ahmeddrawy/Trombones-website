@@ -14,7 +14,7 @@ include "../DBcredentials.php";
 		$password = $_POST['password'];
 		$email = $_POST['email'];
 
-		$sql = "SELECT * FROM users WHERE Password = '$password' AND Email = '$email' " ;
+		$sql = "SELECT * FROM Users WHERE Password = '$password' AND Email = '$email' " ;
 
 		$result = mysqli_query($conn, $sql);
 		$num_of_rows =  mysqli_num_rows($result);

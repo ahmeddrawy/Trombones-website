@@ -10,7 +10,7 @@
 
 <body>
 
-<script type="text/javascript" src="SignInValidation.js"></script>
+<script type="text/javascript" src="SignIN-SignUP/SignInValidation.js"></script>
 
 <header>
 	<img src="icon.png" id="PageIcon"/>
@@ -26,7 +26,7 @@
 
 <div id="content">
 
-<form name="loginForm" id="loginForm" action="SignInCheck.php" method="POST" onsubmit="return(validate());" >
+<form name="loginForm" id="loginForm" action="SignIN-SignUP/SignInCheck.php" method="POST" onsubmit="return(validate());" >
 
 
 <h1>Yamaha, Bach and Mendini Trombones.</h1>
@@ -43,7 +43,7 @@ New Customer? Sign up Now. <input type="submit" value="signup" id="signupBtn"  c
 
 </form>
 
-<form name="GoToSignupForm" id="GoToSignupForm" action="signup.php" method="POST">
+<form name="GoToSignupForm" id="GoToSignupForm" action="SignIN-SignUP/signup.php" method="POST">
 
 New Customer? Sign up Now. <input type="submit" value="signup" id="signupBtn"  class="loginBtn"/> <br/>
 

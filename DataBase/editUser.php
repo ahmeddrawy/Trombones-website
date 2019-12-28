@@ -1,0 +1,97 @@
+<!--  author : Ahmed Hanafy   -->
+<!--  Date : 27-12-2019  -->
+<!--  User Data base manilpulation functions v1.0 -->
+<?php
+   // include "/var/www/html/it-project/DataBase/DBcredentials.php";
+    include "emailcheck.php";
+
+    ini_set('display_errors', true);
+
+?>
+
+<?php
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "trombonedb";
+
+    // Create connection
+    session_start();
+
+
+    //$dbname = "it-project";
+   // print_r($_POST);
+    //$conn = connectToDB($dbname);
+    $conn = mysqli_connect($servername, $username, $password ,$dbname );
+
+    $cantconnectmsg= "cant connect to  Datatbase currently <br>";
+   
+    if($conn->connect_error){
+        die($cantconnectmsg . $conn->connect_error);
+        echo "no no";
+    }
+    else {
+        updateUser();
+        // deleteUser();
+        // query goes here
+    }
+
+    function updateUser(){
+        global $conn ; 
+        $email = $_SESSION['Email'];
+      echo '<script type="text/JavaScript">  
+                     alert("'. $email.'");</script>' ;
+        if(emailfound($email) == true){
+            $uid = getUserByEmail($email);
+            if($uid >-1){
+                $q = "UPDATE Users SET ";
+                $cnt= 0 ;
+                if(!empty($_POST['username'])){
+                    $q.="Name = '{$_POST['username']}'";
+                    ++$cnt;  
+                }
+               if(!empty($_POST['newemail'])){
+                    if($cnt>0)
+                        $q.=" , ";
+                    $q.="Email = '{$_POST['newemail']}'";
+                    ++$cnt;  
+                }
+               if(!empty($_POST['password'])){
+                    if($cnt>0)
+                        $q.=" , ";
+                    $q.="Password = '{$_POST['password']}'";
+                    ++$cnt;  
+                }
+                  else {
+                    echo '<script type="text/JavaScript">  
+                     alert("Sorry Something went wrong");</script>' ;
+                    header('Location: http://localhost/Trombones-website/editUserPage.php');
+                    
+                }
+              
+            $q.=" WHERE UID =$uid";
+              if($conn->query($q)==true){
+                $_SESSION['Email'] = $_POST['newemail'];
+                
+                 echo"done updated";
+                 echo '<script type="text/JavaScript">  
+                     alert("Account Updated");</script>' ;
+                echo '<script type="text/JavaScript"> window.location.href="http://localhost/Trombones-website/userPage.php";</script>';
+                }
+                else {
+                    echo '<script type="text/JavaScript">  
+                     alert("Sorry Something went wrong");</script>' ;
+                    header('Location: http://localhost/Trombones-website/editUserPage.php');
+                    
+                }
+            }
+            else {
+                echo '<script type="text/JavaScript">  
+                     alert("Sorry Something went wrong");</script>' ;
+                    header('Location: http://localhost/Trombones-website/editUserPage.php');
+            }
+        }
+
+    }
+?>

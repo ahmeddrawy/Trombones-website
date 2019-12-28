@@ -49,17 +49,5 @@
 	
 </div>
 	
-<!--
-<form action= "DataBase/editUser.php" method ="post" id="editUserForm">
-
-username :  <input type="text" name ="username" id="formitems">
-age : 		<input type="number" name="age" id="formitems"/>
-password :  <input type="password" name="password" id="formitems"/>
-new Email : <input type="email" name="newemail" id="formitems"/>
-
-<input type="submit" value="update Info" id ="updateBtn"/>
-
-</form>
--->
 </body>
 </html>

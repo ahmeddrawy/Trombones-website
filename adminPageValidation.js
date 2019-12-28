@@ -18,12 +18,14 @@ function validate()
 	}
 
 	flag = false;
+	var count = 0;
 	for (var i = 0; i < input.length; i++) {
 	    if (input[i].value!= "") {
 	        flag = true;
+	        count = count + 1;
 	    }
 	}
-	if(!flag)
+	if(!flag || count > 1)
 	{
 		alert("please enter an amount!");
 		return false;

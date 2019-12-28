@@ -2,7 +2,7 @@
 <!--  Date : 27-12-2019  -->
 <!--  User Data base manilpulation functions v1.0 -->
 <?php
-   // include "/var/www/html/it-project/DataBase/DBcredentials.php";
+    include "../DBcredentials.php";
     include "emailcheck.php";
 
     ini_set('display_errors', true);
@@ -11,25 +11,22 @@
 
 <?php
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "trombonedb";
-
     // Create connection
     session_start();
 
 
-    //$dbname = "it-project";
-   // print_r($_POST);
-    //$conn = connectToDB($dbname);
-    $conn = mysqli_connect($servername, $username, $password ,$dbname );
+    $dbname = "OriginalTrombones";
+    print_r($_POST);
+    
+    $conn = connectToDB($dbname);
 
     $cantconnectmsg= "cant connect to  Datatbase currently <br>";
    
     if($conn->connect_error){
+        echo '<script type="text/JavaScript">  
+                     alert("'.$conn->connect_error.'");</script>' ;
+
         die($cantconnectmsg . $conn->connect_error);
-        echo "no no";
     }
     else {
         updateUser();
@@ -40,8 +37,7 @@
     function updateUser(){
         global $conn ; 
         $email = $_SESSION['Email'];
-      echo '<script type="text/JavaScript">  
-                     alert("'. $email.'");</script>' ;
+
         if(emailfound($email) == true){
             $uid = getUserByEmail($email);
             if($uid >-1){
@@ -63,7 +59,7 @@
                     $q.="Password = '{$_POST['password']}'";
                     ++$cnt;  
                 }
-                  else {
+                else {
                     echo '<script type="text/JavaScript">  
                      alert("Sorry Something went wrong");</script>' ;
                     header('Location: http://localhost/Trombones-website/editUserPage.php');
@@ -74,9 +70,7 @@
               if($conn->query($q)==true){
                 $_SESSION['Email'] = $_POST['newemail'];
                 
-                 echo"done updated";
-                 echo '<script type="text/JavaScript">  
-                     alert("Account Updated");</script>' ;
+                echo"done updated";
                 echo '<script type="text/JavaScript"> window.location.href="http://localhost/Trombones-website/userPage.php";</script>';
                 }
                 else {
@@ -92,6 +86,11 @@
                     header('Location: http://localhost/Trombones-website/editUserPage.php');
             }
         }
+        else {
+                echo '<script type="text/JavaScript">  
+                     alert("Sorry Something went wrong");</script>' ;
+                    header('Location: http://localhost/Trombones-website/editUserPage.php');
+            }
 
     }
 ?>

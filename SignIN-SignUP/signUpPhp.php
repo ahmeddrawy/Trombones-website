@@ -1,44 +1,43 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "trombonedb";
+    include "../DBcredentials.php";
+    ini_set('display_errors', true);
 
-// Create connection
-session_start();
+    $dbname = "OriginalTrombones";
 
-$conn = mysqli_connect($servername, $username, $password ,$dbname );
+	session_start();
 
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-else{
-	echo "Connected successfully\n";
-}
+    $conn = connectToDB($dbname);
 
-$name = $_POST['username'];
-$password = $_POST['password'];
-$email = $_POST['email'];
+	// Check connection
+	if (!$conn) {
+	    die("Connection failed: " . mysqli_connect_error());
+	}
+	else{
+		echo "Connected successfully\n";
+	}
 
-$sql = "INSERT INTO users (Name , Password , Email ) VALUES ('$name' , '$password' , '$email' )" ;
+	$name = $_POST['username'];
+	$password = $_POST['password'];
+	$email = $_POST['email'];
 
-if($conn->query($sql) == true)
-{
-	$_SESSION['message'] = "you are now logged in"; 
-	$_SESSION['email'] = $email;
-	echo "table updated\n" ;
-	header('Location: http://localhost/Trombones-website/');
-}
-else
-{
-	echo "Error updating table: " . $conn->error;
-	$_SESSION['errorMessage'] = $conn->error;
-	header('Location: http://localhost/Trombones-website/SignIN-SignUP/signup.php');
-	//echo "<script type='text/javascript'>alert('$conn->error');</script>";
+	$sql = "INSERT INTO users (Name , Password , Email ) VALUES ('$name' , '$password' , '$email' )" ;
 
-}
+	if($conn->query($sql) == true)
+	{
+		$_SESSION['message'] = "you are now logged in"; 
+		$_SESSION['email'] = $email;
+		echo "table updated\n" ;
+		header('Location: http://localhost/Trombones-website/');
+	}
+	else
+	{
+		echo "Error updating table: " . $conn->error;
+		$_SESSION['errorMessage'] = $conn->error;
+		header('Location: http://localhost/Trombones-website/SignIN-SignUP/signup.php');
+		//echo "<script type='text/javascript'>alert('$conn->error');</script>";
 
-$conn->close();
+	}
+
+	$conn->close();
 
 ?>

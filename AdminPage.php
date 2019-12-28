@@ -46,7 +46,8 @@
 	</div>
 	
 	<div class="row">
-		<form action ="AddTrombones.php" onsubmit="return(validate());" method = "POST" name="addProduct" id="addProduct" >	
+		<form name="EditPrice" id="EditPrice" action ="admin/editprice.php" method="post">	
+
 			<table border="0">
 				<tr> 
 					<td colspan="2" id="tabletitle" > Edit Brand Price </td> 
@@ -101,7 +102,7 @@
 		</form>
 	</div>
 	<div class="row">
-		<form name="ShowProducts">	
+		<form name="ShowProducts" action = "admin/showData.php"  method="post">	
 			<table border="0">
 				<tr> 
 					<td colspan="2" id="tabletitle" > Show Data of one brand </td> 

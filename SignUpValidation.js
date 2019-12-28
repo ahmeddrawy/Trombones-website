@@ -13,11 +13,21 @@ function validate()
         document.signUpForm.username.focus() ;
         return false;
     }
+    else if(illegalChars.test(name)){
+		alert("The username contains illegal characters.");
+		document.signUpForm.username.focus() ;
+        return false;
+	}
     else if( email == "") {
         alert( "Please provide your Email!" );
         document.signUpForm.email.focus() ;
             return false;
          }
+    else if (!EmailForm.test(email) ) {
+		alert( "Please provide a correct Email!" );
+        document.signUpForm.email.focus() ;
+           return false;
+	}
     else if( password == "" || password2 == "" ) {
         alert( "Please provide your Password!" );
         return false;
@@ -28,17 +38,6 @@ function validate()
 		alert("Password confirmation does not match");
 		document.signUpForm.password.focus() ;
 		return false;
-	}
-
-	else if(illegalChars.test(name)){
-		alert("The username contains illegal characters.\n");
-		document.signUpForm.username.focus() ;
-        return false;
-	}
-	else if (!EmailForm.test(email) ) {
-		alert( "Please provide a correct Email!" );
-        document.signUpForm.email.focus() ;
-           return false;
 	}
 	else
 	{

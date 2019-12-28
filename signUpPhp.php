@@ -17,9 +17,9 @@ else{
 	echo "Connected successfully\n";
 }
 
-$name =mysqli_real_escape_string( $_POST['username'] );
-$password = mysqli_real_escape_string ($_POST['password']);
-$email = mysqli_real_escape_string($_POST['email']);
+$name = $_POST['username'];
+$password = $_POST['password'];
+$email = $_POST['email'];
 
 $sql = "INSERT INTO users (Name , Password , Email ) VALUES ('$name' , '$password' , '$email' )" ;
 

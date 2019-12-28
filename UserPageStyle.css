@@ -1,0 +1,221 @@
+*	{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+body{
+		background-color:#EEEEEE;
+	}
+	
+header
+{
+	width:100%;
+	background-color:#EEEEEE;
+	height:80px;
+	padding:15px;
+	padding-top:15px;
+	text-align:center;
+	font-family: 'Lato', sans-serif;
+	position:fixed;
+	top:0px;
+	z-index:1;	
+	border-bottom:2px solid black;
+}
+
+header > * {
+	display:inline-block;
+}
+#PageTags{
+	position:absolute;
+	right:40px;
+	top:15px;
+}
+
+#PageTags > li {
+	text-decoration:none;
+	display:inline-block;
+	margin-right:30px;
+	margin-left:30px;
+	margin-top:5px;
+	z-index:1;	
+}
+
+.userButton{
+	width:120px;
+	background-color:#f1c40f;
+	font-size:15px;
+	font-weight:bold;
+	margin:0px;
+	padding:7px;
+	font-family: 'Lato', sans-serif;
+	
+	border-radius: 12px;
+}
+
+a:link , a:active , a:visited , a:hover
+{
+	text-decoration:none;
+	color:black;
+}
+	
+#PageTitle
+{
+	font-size:30px;
+	font-weight:bold;
+	text-align:left;
+	position:absolute;
+	top:20px;
+	left:75px;
+}
+	
+#PageIcon
+{
+	position:absolute;
+	left:10px;
+	top: 15px;	
+}
+
+#Products
+{	
+	width:80%;
+	font-family: 'Lato', sans-serif;
+	position:absolute;
+	top:180px;
+	height:400px;
+	margin-left:50px;
+}
+
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 30%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 70%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 250px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+#DesVideo
+{
+	margin:0px;
+	margin-left:40px;
+}
+
+#Navigator
+{
+	position:absolute;
+	top:100px;
+	width:auto;
+	background-color:#ddd;
+	padding:0px;
+	left:60px;
+	right:120px;
+}
+
+#NavigatorItem
+{
+	font-weight:bold;
+	display:inline-block;
+	padding:20px;
+	border-right: 1px solid #bbb;
+	margin-right:0px;
+	font-family: 'Lato', sans-serif;
+}
+
+#NavigatorItem:hover:not(.active) {
+  background-color: #46a049;
+  color:white;
+}
+
+.first{
+	margin-left:65px;
+	margin-right:0px;
+}
+
+Details{
+	width:auto;
+	background-color:#eee;
+	border:2px red solid;
+}
+
+#DatabaseInfo
+{
+	margin:10px;
+	font-size:20px;
+	font-family: 'Lato', sans-serif;
+}
+
+#nAvail , #Price {
+	
+	text-decoration:none;
+	list-style-type:none;
+
+}
+
+#buying
+{
+	margin-left:200px;
+	margin-right:80px;
+	background-color:#eee;
+	margin-bottom:50px;
+	margin-top:30px;
+}
+
+.buyButton
+{
+	width:150px;
+	background-color:#f1c40f;
+	font-size:15px;
+	font-weight:bold;
+	margin:10px;
+	margin-left:50px;
+	padding:7px;
+	font-family: 'Lato', sans-serif;
+	border-radius: 12px;
+}
+
+	
+	

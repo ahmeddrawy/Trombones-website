@@ -14,8 +14,8 @@ function validate()
         return false;
     }
 
-	if(illegalChars.test(email)){
-		alert("The email contains illegal characters.\n");
+	if(!illegalChars.test(email)){
+		alert("The email is not written correctly.\n");
         return false;
 	}
 	else

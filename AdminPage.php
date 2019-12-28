@@ -17,7 +17,7 @@
 
 <div id="content">
 	<div class="row">
-		<form name="addProduct" id="addProduct">	
+		<form action ="AddTrombones.php" method = "POST" name="addProduct" id="addProduct">	
 			<table border="0">
 				<tr> 
 					<td colspan="2" id="tabletitle" > Add more Trombones </td> 

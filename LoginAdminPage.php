@@ -8,6 +8,8 @@
 
 
 <body>
+
+
 <header>
 	<img src="icon.png" id="PageIcon"/>
 	<h1 id="PageTitle">Original Trombones</h1>
@@ -17,7 +19,7 @@
 </header>
 
 <div id="content">
-	<form name="loginAdminForm" id="loginAdminForm" action="AdminPage.php" >	
+	<form action="AdminPageCheck.php" method="POST" name="loginAdminForm" id="loginAdminForm" onsubmit="return(validate());" >
 		<table border="0">
 			<tr> 
 				<td colspan="2" id="tabletitle" > You can login here if you're admin</td> 
@@ -30,27 +32,45 @@
 			
 			<tr> 
 				<td id = "infotxt">Password :</td>
-				<td id = "formitems"><input id = "inputTxt" name="adminPassword" type="Password"/></td>
+				<td id = "formitems"><input id = "inputTxt" name="password" type="Password"/></td>
 			</tr>
 			
 			<tr>
-				<th colspan="2"> <input  type="submit" value="login" id ="updateBtn"/><th>
+				<th colspan="2"> <input  type="submit" value="login" id ="updateBtn" name = "loginBTN"/><th>
 			</tr>
 		</table>
 	</form>
 	
 </div>
 	
+	<script>
+		function validate()
+		{
+			
+			var password = document.getElementsByName("password")[0].value;
+			var email = document.getElementsByName("adminMail")[0].value;
+						
+		 	var illegalChars = /\S+@\S+\.\S+/; // allow letters, numbers, and underscores
 
-<!--
-<form name="loginAdminForm" id="loginAdminForm" action="AdminPage.php" >
+		    if( email == "") {
+		        alert( "Please provide your Email!" );
+		        return false;
+		     }
+		    if( password == "" ) {
+		        alert( "Please provide your Password!" );
+		        return false;
+		    }
 
-email <input type="email" name="adminMail" id="adminMail"/>
-password <input type="password" name="adminPassword" id="adminPassword"/>
+			if(!illegalChars.test(email)){
+				alert("The email is not written correctly.\n");
+		        return false;
+			}
+			else
+			{
+				return true;
+			}
 
-<input type="submit" value="login"/>
-
-</form>
--->
+		}	
+	</script>
 </body>
 </html>

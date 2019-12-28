@@ -34,7 +34,7 @@ else
 {
 	echo "Error updating table: " . $conn->error;
 	$_SESSION['errorMessage'] = $conn->error;
-	header('Location: http://localhost/Trombones-website/signup.php');
+	header('Location: http://localhost/Trombones-website/SignIN-SignUP/signup.php');
 	//echo "<script type='text/javascript'>alert('$conn->error');</script>";
 
 }

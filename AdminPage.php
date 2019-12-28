@@ -1,11 +1,129 @@
 <html>
 <head>
 
+<link rel="stylesheet" type="text/css" href="AdminPageStyle.css"/>
 
 </head>
 <body>
 
 
+<header>
+	<img src="icon.png" id="PageIcon"/>
+	<h1 id="PageTitle">Original Trombones</h1>
+	<ul id="PageTags"> 
+		<li><input type="button" class="userButton" value="Log Out" onclick="window.location.href = 'index.php'"/> </li>
+	</ul> 
+</header>
+
+<div id="content">
+	<div class="row">
+		<form name="addProduct" id="addProduct">	
+			<table border="0">
+				<tr> 
+					<td colspan="2" id="tabletitle" > Add more Trombones </td> 
+				</tr>
+				
+				<tr> 
+					<td id = "infotxt">Brand Name</td>
+					<td id = "formitems">
+						<input type="radio" name="brandName" value="Yamaha" class ="SelectBrand"> Yamaha<br>
+						<input type="radio" name="brandName" value="Mendini" class ="SelectBrand"> Mendini<br>
+						<input type="radio" name="brandName" value="Bach" class ="SelectBrand"> Bach	
+					</td>
+				</tr>
+				
+				<tr> 
+					<td id = "infotxt">number of new Trombones </td>
+					<td id = "formitems"> <input id = "inputTxt" name="nNewTrombones" type="number"/></td>
+				</tr>
+				
+				<tr>
+					<th colspan="2"> <input  type="submit" value="update Info" id ="updateBtn"/></th>
+				</tr>
+			</table>
+		</form>
+	</div>
+	
+	<div class="row">
+		<form name="EditPrice" id="EditPrice">	
+			<table border="0">
+				<tr> 
+					<td colspan="2" id="tabletitle" > Edit Brand Price </td> 
+				</tr>
+				
+				<tr> 
+					<td id = "infotxt">Brand Name</td>
+					<td id = "formitems">
+						<input type="radio" name="brandName" value="Yamaha" class ="SelectBrand"> Yamaha<br>
+						<input type="radio" name="brandName" value="Mendini" class ="SelectBrand"> Mendini<br>
+						<input type="radio" name="brandName" value="Bach" class ="SelectBrand"> Bach	
+					</td>
+				</tr>
+				
+				<tr> 
+					<td id = "infotxt">New Price </td>
+					<td id = "formitems"> <input id = "inputTxt" name="TrombonePrice" type="number"/></td>
+				</tr>
+				
+				<tr>
+					<th colspan="2"> <input  type="submit" value="update Info" id ="updateBtn"/></th>
+				</tr>
+			</table>
+		</form>
+	</div>
+	
+	<div class="row">
+		<form form name="DeleteTrombones" id="DeleteTrombones">	
+			<table border="0">
+				<tr> 
+					<td colspan="2" id="tabletitle" > Delete Trombones </td> 
+				</tr>
+				
+				<tr> 
+					<td id = "infotxt">Brand Name</td>
+					<td id = "formitems">
+						<input type="radio" name="brandName" value="Yamaha" class ="SelectBrand"> Yamaha<br>
+						<input type="radio" name="brandName" value="Mendini" class ="SelectBrand"> Mendini<br>
+						<input type="radio" name="brandName" value="Bach" class ="SelectBrand"> Bach	
+					</td>
+				</tr>
+				
+				<tr> 
+					<td id = "infotxt">number of Deleted Trombones </td>
+					<td id = "formitems"> <input id = "inputTxt" name="nDeletedTrombones" type="number"/></td>
+				</tr>
+				
+				<tr>
+					<th colspan="2"> <input  type="submit" value="update Info" id ="updateBtn"/></th>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<div class="row">
+		<form name="ShowProducts">	
+			<table border="0">
+				<tr> 
+					<td colspan="2" id="tabletitle" > Show Data of one brand </td> 
+				</tr>
+				
+				<tr> 
+					<td id = "infotxt">Brand Name</td>
+					<td id = "formitems">
+						<input type="radio" name="brandName" value="Yamaha" class ="SelectBrand"> Yamaha<br>
+						<input type="radio" name="brandName" value="Mendini" class ="SelectBrand"> Mendini<br>
+						<input type="radio" name="brandName" value="Bach" class ="SelectBrand"> Bach	
+					</td>
+				</tr>
+				
+				<tr>
+					<th colspan="2"> <input  type="submit" value="update Info" id ="updateBtn"/></th>
+				</tr>
+			</table>
+		</form>
+	</div>
+		
+</div>
+<!--
 <form name="addProduct" id="addProduct">
 Brand Name 
 <br/><input type="radio" name="brandName" value="Yamaha"> Yamaha<br>
@@ -15,6 +133,8 @@ Brand Name
 number of new Trombones : <input type="number" name="nNewTrombones" id="number" value="0"/>
 <input type="submit" value="submit"/>
 </form>
+/****************************************************/
+
 
 
 <form name="EditPrice" id="EditPrice">
@@ -23,9 +143,11 @@ Brand Name
 <input type="radio" name="brandName" value="Mendini"> Mendini<br>
 <input type="radio" name="brandName" value="Bach"> Bach<br>
 
-New Price <input type="number" name="nTrombones" id="number" value="0"/>
+New Price <input type="number" name="TrombonePrice" id="number" value="0"/>
 <input type="submit" value="submit"/>
 </form>
+
+/******************************************************************/
 
 
 <form name="DeleteTrombones" id="DeleteTrombones">
@@ -38,6 +160,7 @@ number of new Trombones : <input type="number" name="nDeletedTrombones" id="numb
 <input type="submit" value="submit"/>
 </form>
 
+/********************************************************************/
 
 <form name="ShowProducts">
 Brand Name 
@@ -48,7 +171,7 @@ Brand Name
 <input type="submit" value="submit"/>
 </form>
 
-
+-->
 
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
     $username="root";
-    $password = "";
+    $password = "S";
     $server="localhost";
     function connectToDB($dbname){
         global $server ,$password , $username;

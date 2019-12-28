@@ -6,17 +6,19 @@
 </head>
 <body>
 
+<script type="text/javascript" src="SignUpValidation.js"></script>
+
 <header>
 	<img src="icon.png" id="PageIcon"/>
 	<h1 id="PageTitle">Original Trombones</h1>
 	<ul id="PageTags"> 
 		<li><input type="button" class="userButton" value="Back To Profile" onclick ="window.location.href = 'userPage.php'"/></li>
-		<li><input type="button" class="userButton" value="Log Out" onclick="window.location.href = 'index.php'"/> </li>
+		<li><input type="button" class="userButton" value="Home Page" onclick="window.location.href = 'index.php'"/> </li>
 	</ul> 
 </header>
 
 <div id="content">
-	<form action="signup.php" method="post" name="signUpForm" onsubmit="return(validate());">	
+	<form action="signUpPhp.php" method="POST" name="signUpForm" onsubmit="return(validate());">	
 		<table border="0">
 			<tr> 
 				<td colspan="2" id="tabletitle" > Create a New Account to be able to buy from us </td> 
@@ -31,11 +33,12 @@
 				<td id = "infotxt">Email :</td>
 				<td id = "formitems"> <input id = "inputTxt"  name ="email" type="e-mail"/></td>
 			</tr>
-			
+		<!--
 			<tr> 
 				<td id = "infotxt">Age :</td>
 				<td id = "formitems"><input id = "inputTxt" name="age" type="number"/></td>
 			</tr>
+		-->
 			<tr> 
 				<td id = "infotxt">Password :</td>
 				<td id = "formitems"><input id = "inputTxt" name="password" type="Password"/></td>
@@ -72,3 +75,14 @@ confirm Password : <input type="password" name="password2" id="password2"/> <br/
 -->
 </body>
 </html>
+
+<?php session_start();
+
+if(isset($_SESSION['errorMessage']) && !empty($_SESSION['errorMessage'])) {
+	echo '<script type="text/JavaScript">  
+    alert("'.$_SESSION['errorMessage'].'");</script>' ;
+	unset($_SESSION['errorMessage']) ;
+}
+//echo("hello world");
+
+ ?>

@@ -5,10 +5,11 @@
 <title> Home Page </title>
 
 <link rel="stylesheet" type="text/css" href="HomePageStyle.css"/>
-
+	
 </head>
 
 <body>
+
 <script type="text/javascript" src="SignInValidation.js"></script>
 
 <header>
@@ -16,8 +17,9 @@
 	<h1 id="PageTitle">Original Trombones</h1>
 	<ul id="PageTags"> 
 		<li> <a href="#Features">Features</a></li>
-		<li> <a href="#How it works"> How It Works</a></li>
-		<li> <a href="#pricing">Pricing</a></li>
+		<li> <a href="#How it works"> Login as Admin
+						<input type="button" class="loginBtn" id="AdminloginBtn" value="login" onclick = "window.location.href = 'AdminPage.php'"/> <br/>
+		</a></li>
 	</ul> 
 </header>
 

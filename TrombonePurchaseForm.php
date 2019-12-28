@@ -1,7 +1,5 @@
 <?php
     include "DBcredentials.php";
-    include "emailcheck.php";
-
     ini_set('display_errors', true);
 
 ?>

@@ -7,12 +7,17 @@
 <body>
 
 <header>
+
 	<img src="icon.png" id="PageIcon"/>
-	<h1 id="PageTitle">Original Trombones</h1>
-	<ul id="PageTags"> 
-		<li><input type="button" class="userButton" value="Edit Profile" onclick ="window.location.href = 'editUserPage.php'"/></li>
-		<li><input type="button" class="userButton" value="Log Out" onclick="window.location.href = 'index.php'"/> </li>
-	</ul> 
+
+	<form  action="logout.php" method="POST">
+		<h1 id="PageTitle">Original Trombones</h1>
+		<ul id="PageTags"> 
+			<li><input type="button" class="userButton" value="Edit Profile" onclick ="window.location.href = 'editUserPage.php'"/></li>
+			<li><input type="submit" class="userButton" value="Log Out"/> </li>
+		</ul> 
+	</form>
+
 </header>
 
 

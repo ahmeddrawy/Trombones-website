@@ -3,11 +3,13 @@
 <head>
 
 <title> Home Page </title>
+
 <link rel="stylesheet" type="text/css" href="HomePageStyle.css"/>
-	
+
 </head>
 
 <body>
+<script type="text/javascript" src="SignInValidation.js"></script>
 
 <header>
 	<img src="icon.png" id="PageIcon"/>
@@ -22,23 +24,24 @@
 
 <div id="content">
 
-<form name="loginForm" id="loginForm"> 
+<form name="loginForm" id="loginForm" action="SignInCheck.php" method="POST" onsubmit="return(validate());" >
+
 
 <h1>Yamaha, Bach and Mendini Trombones.</h1>
 <br/>
 <h2>Sign in to Buy Now.</h2>
 
-username <input type="text" id="username" /> <br/>
-password <input type="password" id="password"/> <br/>
+Email <input type="text" id="username" name="email"/> <br/>
+Password <input type="password" id="password" name="password"/> <br/>
 
-
-<input type="button" class="loginBtn" id="loginBtn" value="login" onclick = "window.location.href = 'userPage.php'"/> <br/>
+<input type="submit" class="loginBtn" id="loginBtn" value="login" name = "loginBTN"/> <br/>
 <!--
 New Customer? Sign up Now. <input type="submit" value="signup" id="signupBtn"  class="loginBtn"/> <br/>
 -->
+
 </form>
 
-<form name="GoToSignupForm" id="GoToSignupForm" action="signup.php">
+<form name="GoToSignupForm" id="GoToSignupForm" action="signup.php" method="POST">
 
 New Customer? Sign up Now. <input type="submit" value="signup" id="signupBtn"  class="loginBtn"/> <br/>
 

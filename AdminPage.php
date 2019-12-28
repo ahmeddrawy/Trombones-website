@@ -6,6 +6,7 @@
 </head>
 <body>
 
+<script type="text/javascript" src="adminPageValidation.js"></script>
 
 <header>
 	<img src="icon.png" id="PageIcon"/>
@@ -17,7 +18,7 @@
 
 <div id="content">
 	<div class="row">
-		<form action ="AddTrombones.php" method = "POST" name="addProduct" id="addProduct">	
+		<form action ="AddTrombones.php" onsubmit="return(validate());" method = "POST" name="addProduct" id="addProduct" >	
 			<table border="0">
 				<tr> 
 					<td colspan="2" id="tabletitle" > Add more Trombones </td> 
@@ -34,7 +35,7 @@
 				
 				<tr> 
 					<td id = "infotxt">number of new Trombones </td>
-					<td id = "formitems"> <input id = "inputTxt" name="nNewTrombones" type="number"/></td>
+					<td id = "formitems"> <input id = "inputTxt" name="inputTxt" type="number"/></td>
 				</tr>
 				
 				<tr>
@@ -45,7 +46,7 @@
 	</div>
 	
 	<div class="row">
-		<form name="EditPrice" id="EditPrice">	
+		<form action ="AddTrombones.php" onsubmit="return(validate());" method = "POST" name="addProduct" id="addProduct" >	
 			<table border="0">
 				<tr> 
 					<td colspan="2" id="tabletitle" > Edit Brand Price </td> 
@@ -62,7 +63,7 @@
 				
 				<tr> 
 					<td id = "infotxt">New Price </td>
-					<td id = "formitems"> <input id = "inputTxt" name="TrombonePrice" type="number"/></td>
+					<td id = "formitems"> <input id = "inputTxt" name="inputTxt" type="number"/></td>
 				</tr>
 				
 				<tr>
@@ -73,7 +74,7 @@
 	</div>
 	
 	<div class="row">
-		<form form name="DeleteTrombones" id="DeleteTrombones">	
+		<form action ="AddTrombones.php" onsubmit="return(validate());" method = "POST" name="addProduct" id="addProduct" >	
 			<table border="0">
 				<tr> 
 					<td colspan="2" id="tabletitle" > Delete Trombones </td> 
@@ -90,7 +91,7 @@
 				
 				<tr> 
 					<td id = "infotxt">number of Deleted Trombones </td>
-					<td id = "formitems"> <input id = "inputTxt" name="nDeletedTrombones" type="number"/></td>
+					<td id = "formitems"> <input id = "inputTxt" name="inputTxt" type="number"/></td>
 				</tr>
 				
 				<tr>
@@ -123,6 +124,7 @@
 	</div>
 		
 </div>
+
 <!--
 <form name="addProduct" id="addProduct">
 Brand Name 

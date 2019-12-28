@@ -23,9 +23,14 @@
 
 <div id="Navigator">
 <ul id="NavigatorList">
-  <li id="NavigatorItem" class="first"><a href="#" onclick="GetYamahaInfo();">Yamaha Trombones</a></li>
-  <li id="NavigatorItem"><a href="#" onclick="GetMendiniInfo();">Mendini Trombones</a></li>
-  <li id="NavigatorItem"><a href="#" onclick="GetBachInfo();">Bach Trombones</a></li>
+  
+  <li id="NavigatorItem" class="first"> <a href="#" onclick="GetYamahaInfo()">Yamaha Trombones</a></li>
+<!--
+<a href="#" onclick="BeHappy()" value="Be Happy"> be happy</a> 
+ -->
+  
+  <li id="NavigatorItem"><a href="#" onclick="GetMendiniInfo()">Mendini Trombones</a></li>
+  <li id="NavigatorItem"><a href="#" onclick="GetBachInfo()">Bach Trombones</a></li>
 </ul>
 </div>
 
@@ -36,7 +41,9 @@
 	
 	<div class="gallery">
 		<a target="_blank" href="Bach2.png" id="TrombonesImg">
-		<img src="Bach2.png" alt="Bach" width="600" height="400">
+		
+		<img src="Bach2.png" alt="Bach" width="600" height="400" id="TrombonesImgSrc">
+		
 		</a>
 		<div class="desc" id="imgName">Bach Trombones<br/>
 			<li id="nAvail">Available : xxx</li>
@@ -49,8 +56,8 @@
   
   <div class="column middle">
   		<h2>Listen and enjoy</h2><br/>
-	<video width="100%" height="100%" id="DesVideo" controls>
-	<source src="Bach2.mp4" type="video/mp4">
+	<video id="videoSrc" width="100%" height="100%" id="DesVideo" controls>
+	<source src="Bach.mp4" type="video/mp4" >
 		Your browser does not support the video tag.
 	</video>
   </div>
@@ -69,6 +76,44 @@
 <br/>
 </div>
 
+<script>
+function GetYamahaInfo()
+{
+
+	var TromboneImage = document.getElementById("TrombonesImgSrc");
+	var imageName = document.getElementById("imgName");
+	var videoSrc = document.getElementById("videoSrc");
+
+	TromboneImage.src = "Yamaha.jpg";
+	imageName.innerHTML = "Yamaha Trombones"; 
+	videoSrc.src="Yamaha.mp4"
+
+}
+
+function GetMendiniInfo()
+{
+	var TromboneImage = document.getElementById("TrombonesImgSrc");
+	var imageName = document.getElementById("imgName");
+	var videoSrc = document.getElementById("videoSrc");
+
+	TromboneImage.src = "Mendini.jpg";
+	imageName.innerHTML = "Mendini Trombones"; 
+	videoSrc.src="Mendini.mp4"
+
+}
+
+function GetBachInfo()
+{
+	var TromboneImage = document.getElementById("TrombonesImgSrc");
+	var imageName = document.getElementById("imgName");
+	var videoSrc = document.getElementById("videoSrc");
+
+	TromboneImage.src = "Bach2.png";
+	imageName.innerHTML = "Bach Trombones"; 
+	videoSrc.src="Bach2.mp4"
+}
+
+</script>
 
 </body>
 </html>

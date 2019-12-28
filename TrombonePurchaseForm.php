@@ -39,7 +39,7 @@
                     $qChange= "UPDATE Trombones SET nAvailable = $nwAva WHERE Brand= '$brand'";
                     if($conn->query($q)== true  ){
                         $conn->query($qChange);
-                        echo "succefully purchased ".$nItems ." of ". $brand ."<br>";
+                       	 echo "succefully purchased ".$nItems ." of ". $brand ."<br>";
                     }
                     else  {
                         echo "unfortuanelty we cant complete this operation .<br>";

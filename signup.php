@@ -30,11 +30,12 @@
 				<td id = "infotxt">Email :</td>
 				<td id = "formitems"> <input id = "inputTxt"  name ="email" type="e-mail"/></td>
 			</tr>
-			
+			<!--
 			<tr> 
 				<td id = "infotxt">Age :</td>
 				<td id = "formitems"><input id = "inputTxt" name="age" type="number"/></td>
 			</tr>
+			-->
 			<tr> 
 				<td id = "infotxt">Password :</td>
 				<td id = "formitems"><input id = "inputTxt" name="password" type="Password"/></td>

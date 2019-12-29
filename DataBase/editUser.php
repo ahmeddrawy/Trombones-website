@@ -62,7 +62,7 @@
                 else {
                     echo '<script type="text/JavaScript">  
                      alert("Sorry Something went wrong");</script>' ;
-                    header('Location: http://localhost/Trombones-website/editUserPage.php');
+                   // header('Location: http://localhost/Trombones-website/editUserPage.php');
                     
                 }
               
@@ -74,8 +74,7 @@
                 echo '<script type="text/JavaScript"> window.location.href="http://localhost/Trombones-website/userPage.php";</script>';
                 }
                 else {
-                    echo '<script type="text/JavaScript">  
-                     alert("Sorry Something went wrong");</script>' ;
+                    $_SESSION['errorMessage'] = $conn->error;
                     header('Location: http://localhost/Trombones-website/editUserPage.php');
                     
                 }
@@ -83,13 +82,13 @@
             else {
                 echo '<script type="text/JavaScript">  
                      alert("Sorry Something went wrong");</script>' ;
-                    header('Location: http://localhost/Trombones-website/editUserPage.php');
+                   header('Location: http://localhost/Trombones-website/editUserPage.php');
             }
         }
         else {
                 echo '<script type="text/JavaScript">  
                      alert("Sorry Something went wrong");</script>' ;
-                    header('Location: http://localhost/Trombones-website/editUserPage.php');
+                   header('Location: http://localhost/Trombones-website/editUserPage.php');
             }
 
     }

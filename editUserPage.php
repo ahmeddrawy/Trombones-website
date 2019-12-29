@@ -1,13 +1,13 @@
 <html>
 <head>
 
-<link rel="stylesheet" type="text/css" href="editUserPageStyle.css"/>
+<link rel="stylesheet" type="text/css" href="Style Pages/editUserPageStyle.css"/>
 
 </head>
 <body>
 
 <header>
-	<img src="icon.png" id="PageIcon"/>
+	<img src="PICTURES/icon.png" id="PageIcon"/>
 	<h1 id="PageTitle">Original Trombones</h1>
 	<ul id="PageTags"> 
 		<li><input type="button" class="userButton" value="Back To Profile" onclick ="window.location.href = 'userPage.php'"/></li>
@@ -51,3 +51,14 @@
 	
 </body>
 </html>
+
+<?php session_start();
+
+if(isset($_SESSION['errorMessage']) && !empty($_SESSION['errorMessage'])) {
+	echo '<script type="text/JavaScript">  
+    alert("'.$_SESSION['errorMessage'].'");</script>' ;
+	unset($_SESSION['errorMessage']) ;
+}
+//echo("hello world");
+
+ ?>

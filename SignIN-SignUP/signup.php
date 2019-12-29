@@ -1,7 +1,7 @@
 <html>
 <head>
 
-<link rel="stylesheet" type="text/css" href="editUserPageStyle.css"/>
+<link rel="stylesheet" type="text/css" href="Style Pages/../editUserPageStyle.css"/>
 
 </head>
 <body>
@@ -9,7 +9,7 @@
 <script type="text/javascript" src="SignUpValidation.js"></script>
 
 <header>
-	<img src="icon.png" id="PageIcon"/>
+	<img src="PICTURES/../icon.png" id="PageIcon"/>
 	<h1 id="PageTitle">Original Trombones</h1>
 	<ul id="PageTags"> 
 

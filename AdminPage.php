@@ -1,15 +1,15 @@
 <html>
 <head>
 
-<link rel="stylesheet" type="text/css" href="AdminPageStyle.css"/>
+<link rel="stylesheet" type="text/css" href="Style Pages/AdminPageStyle.css"/>
 
 </head>
 <body>
 
-<script type="text/javascript" src="adminPageValidation.js"></script>
+<script type="text/javascript" src="admin/adminPageValidation.js"></script>
 
 <header>
-	<img src="icon.png" id="PageIcon"/>
+	<img src="PICTURES/icon.png" id="PageIcon"/>
 	<h1 id="PageTitle">Original Trombones</h1>
 	<ul id="PageTags"> 
 		<li><input type="button" class="userButton" value="Log Out" onclick="window.location.href = 'index.php'"/> </li>
@@ -18,7 +18,7 @@
 
 <div id="content">
 	<div class="row">
-		<form action ="admin/AdminPageCheck.php" onsubmit="return(validate());" method = "POST" name="addProduct" id="addProduct" >	
+		<form action ="admin/AddTrombones.php" onsubmit="return(validate());" method = "POST" name="addProduct" id="addProduct" >	
 			<table border="0">
 				<tr> 
 					<td colspan="2" id="tabletitle" > Add more Trombones </td> 
@@ -75,7 +75,7 @@
 	</div>
 	
 	<div class="row">
-		<form action ="AddTrombones.php" onsubmit="return(validate());" method = "POST" name="addProduct" id="addProduct" >	
+		<form action ="admin/AddTrombones.php" onsubmit="return(validate());" method = "POST" name="addProduct" id="addProduct" >	
 			<table border="0">
 				<tr> 
 					<td colspan="2" id="tabletitle" > Delete Trombones </td> 

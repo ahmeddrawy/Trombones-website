@@ -2,7 +2,7 @@
 
 
 <head>
-<link rel="stylesheet" type="text/css" href="editUserPageStyle.css"/>
+<link rel="stylesheet" type="text/css" href="Style Pages/editUserPageStyle.css"/>
 
 </head>
 
@@ -11,7 +11,7 @@
 
 
 <header>
-	<img src="icon.png" id="PageIcon"/>
+	<img src="PICTURES/icon.png" id="PageIcon"/>
 	<h1 id="PageTitle">Original Trombones</h1>
 	<ul id="PageTags"> 
 		<li><input type="button" class="userButton" value="Back To Home Page" onclick="window.location.href = 'index.php'"/> </li>
@@ -19,7 +19,7 @@
 </header>
 
 <div id="content">
-	<form action="AdminLoginCheck.php" method="POST" name="loginAdminForm" id="loginAdminForm" onsubmit="return(validate());" >
+	<form action="admin/AdminLoginCheck.php" method="POST" name="loginAdminForm" id="loginAdminForm" onsubmit="return(validate());" >
 		<table border="0">
 			<tr> 
 				<td colspan="2" id="tabletitle" > You can login here if you're admin</td> 

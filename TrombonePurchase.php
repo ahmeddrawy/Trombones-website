@@ -1,7 +1,7 @@
 <html>
 <head>
 
-<link rel="stylesheet" type="text/css" href="editUserPageStyle.css"/>
+<link rel="stylesheet" type="text/css" href="Style Pages/editUserPageStyle.css"/>
 <style>
 
 #radioInput

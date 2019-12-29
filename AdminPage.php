@@ -118,7 +118,7 @@
 				</tr>
 				
 				<tr>
-					<th colspan="2"> <input  type="submit" value="update Info" id ="updateBtn"/></th>
+					<th colspan="2"> <input  type="submit" value="Show Info" id ="updateBtn"/></th>
 				</tr>
 			</table>
 		</form>

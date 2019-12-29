@@ -50,7 +50,7 @@
   <div class="column middle">
   		<h2>Listen and enjoy</h2><br/>
 	<video id="videoSrc" width="100%" height="100%" id="DesVideo" controls>
-	<source src="PICTURES/Bach2.mp4" type="video/mp4">
+	<source src="Bach2.mp4" type="video/mp4">
 		Your browser does not support the video tag.
 	</video>
   </div>

@@ -68,7 +68,7 @@
               
             $q.=" WHERE UID =$uid";
               if($conn->query($q)==true){
-                $_SESSION['Email'] = !isempty($_POST['newemail'])?$_POST['newemail'] :$_SESSION['Email'] ;
+                $_SESSION['Email'] = !empty($_POST['newemail'])?$_POST['newemail'] :$_SESSION['Email'] ;
                 
                 echo"done updated";
                 echo '<script type="text/JavaScript"> window.location.href="http://localhost/Trombones-website/userPage.php";</script>';

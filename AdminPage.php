@@ -96,7 +96,7 @@
 				</tr>
 				
 				<tr>
-					<th colspan="2"> <input  type="submit" value="update Info" id ="updateBtn"/></th>
+					<th colspan="2"> <input  type="submit" value="update Info" id ="updateBtn" name="DeleteData"/></th>
 				</tr>
 			</table>
 		</form>
